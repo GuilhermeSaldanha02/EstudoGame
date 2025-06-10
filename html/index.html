@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Início - EstudoGame</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <main class="main-container">
+        <div class="mb-8">
+            <h1 class="text-3xl font-bold">Painel Principal</h1>
+            <p class="text-white/60">Bem-vindo(a) de volta!</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="card p-6 col-span-full">
+                <h2 class="text-xl font-bold">Seu Próximo Desafio</h2>
+                <p class="text-white/60">Controle de Constitucionalidade te aguarda.</p>
+                <a href="desafios.html" class="btn-primary mt-4 inline-block">Ver Desafios</a>
+            </div>
+            
+            <div class="card p-6">
+                <h3 class="text-lg font-semibold mb-2">Seu Progresso</h3>
+                <a href="perfil.html" class="text-cyan-300 hover:underline">Ver Perfil Detalhado</a>
+            </div>
+            
+            <div class="card p-6">
+                <h3 class="text-lg font-semibold mb-2">Comunidade</h3>
+                <a href="comunidade.html" class="text-cyan-300 hover:underline">Ver Últimos Posts</a>
+            </div>
+        </div>
+    </main>
+
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-link"><i class="fa-regular fa-house"></i> Início</a>
+        <a href="desafios.html" class="nav-link"><i class="fa-regular fa-trophy"></i> Desafios</a>
+        <a href="registro_de_estudos.html" class="nav-link"><i class="fa-regular fa-clock"></i> Registro</a>
+        <a href="comunidade.html" class="nav-link"><i class="fa-regular fa-users"></i> Comunidade</a>
+        <a href="perfil.html" class="nav-link"><i class="fa-regular fa-user"></i> Perfil</a>
+    </nav>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

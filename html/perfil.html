@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil - EstudoGame</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <main class="main-container">
+        <div class="text-center mb-8">
+            <img id="profile-avatar" class="w-24 h-24 rounded-full mx-auto border-4 border-cyan-400" src="https://via.placeholder.com/150" alt="Avatar">
+            <h1 id="profile-name" class="text-2xl font-bold mt-4">Carregando...</h1>
+        </div>
+
+        <div class="grid grid-cols-3 gap-4 text-center">
+            <div class="card p-4">
+                <p class="text-xl font-bold" id="stats-questoes">0</p>
+                <p class="text-xs text-white/60">Questões</p>
+            </div>
+            <div class="card p-4">
+                <p class="text-xl font-bold" id="stats-desafios">0</p>
+                <p class="text-xs text-white/60">Desafios</p>
+            </div>
+            <div class="card p-4">
+                <p class="text-xl font-bold" id="stats-horas">0</p>
+                <p class="text-xs text-white/60">Horas</p>
+            </div>
+        </div>
+    </main>
+
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-link"><i class="fa-regular fa-house"></i> Início</a>
+        <a href="desafios.html" class="nav-link"><i class="fa-regular fa-trophy"></i> Desafios</a>
+        <a href="registro_de_estudos.html" class="nav-link"><i class="fa-regular fa-clock"></i> Registro</a>
+        <a href="comunidade.html" class="nav-link"><i class="fa-regular fa-users"></i> Comunidade</a>
+        <a href="perfil.html" class="nav-link"><i class="fa-regular fa-user"></i> Perfil</a>
+    </nav>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/perfil.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+/* css/home.css */
+
+.welcome-banner {
+    background: linear-gradient(45deg, var(--primary-color), var(--primary-color-dark));
+    color: white;
+    border-radius: var(--border-radius);
+}
+
+.quick-stats .stat {
+    background-color: var(--surface-color);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+}
+
+.recent-activity .activity-item {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.recent-activity .activity-item:last-child {
+    border-bottom: none;
+}
+
+.activity-item .icon {
+    margin-right: 1rem;
+    color: var(--primary-color);
+}
+
+.current-challenge-card .challenge-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+}

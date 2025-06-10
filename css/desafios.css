@@ -1,0 +1,36 @@
+/* Estilos para a página de desafios */
+.challenge-card {
+    /* A borda agora indica a dificuldade */
+    border-left: 5px solid;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.challenge-card:hover {
+    background-color: var(--surface-bg-color);
+}
+
+.challenge-card .card-title a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.2s;
+}
+
+.challenge-card .card-title a:hover {
+    color: var(--surface-border-focus); /* Cor de destaque */
+}
+
+/* Cores de borda para as dificuldades */
+.difficulty-easy { border-left-color: #28a745; }
+.difficulty-medium { border-left-color: #ffc107; }
+.difficulty-hard { border-left-color: #dc3545; }
+
+.badge-difficulty {
+    padding: 0.25rem 0.75rem;
+    border-radius: 50rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.badge-easy { background-color: #28a745; color: white; }
+.badge-medium { background-color: #ffc107; color: #333; }
+.badge-hard { background-color: #dc3545; color: white; }

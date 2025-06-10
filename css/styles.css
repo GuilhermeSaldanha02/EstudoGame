@@ -1,0 +1,104 @@
+/* css/styles.css - Versão Mobile App */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Roboto+Mono:wght@400;700&display=swap');
+
+:root {
+    --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --accent-gradient: linear-gradient(45deg, #4ecdc4, #45b7d1);
+    --text-color: #ffffff;
+    --text-color-muted: rgba(255, 255, 255, 0.6);
+    --surface-bg-color: rgba(30, 30, 45, 0.5); /* Fundo um pouco mais escuro para contraste */
+    --surface-border-color: rgba(255, 255, 255, 0.2);
+    --surface-border-focus: #4ecdc4;
+    --font-family-sans-serif: 'Inter', sans-serif;
+    --border-radius: 0.75rem;
+}
+
+body {
+    font-family: var(--font-family-sans-serif);
+    background: var(--primary-gradient);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Container principal que ocupa a tela, com espaço para a barra de navegação */
+.main-container {
+    padding: 1.5rem;
+    padding-bottom: 90px; /* Espaço na parte inferior para a barra de navegação */
+}
+
+/* Barra de Navegação Inferior */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--surface-bg-color);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 1px solid var(--surface-border-color);
+    display: flex;
+    justify-content: space-around;
+    padding: 0.75rem 0.5rem;
+    z-index: 1000;
+}
+
+.bottom-nav .nav-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    flex: 1;
+    color: var(--text-color-muted);
+    text-decoration: none;
+    font-size: 0.75rem;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.bottom-nav .nav-link:hover {
+    color: var(--text-color);
+}
+
+.bottom-nav .nav-link.active {
+    color: var(--surface-border-focus);
+    transform: translateY(-3px);
+}
+
+/* Componentes (Cards, Botões, etc.) */
+.card {
+    background: var(--surface-bg-color);
+    border: 1px solid var(--surface-border-color);
+    border-radius: var(--border-radius);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+    background: var(--accent-gradient);
+    border: none;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(78, 205, 196, 0.3);
+}
+
+.form-control {
+    background: var(--surface-bg-color);
+    border: 1px solid var(--surface-border-color);
+    color: var(--text-color);
+    border-radius: var(--border-radius);
+}
+
+.form-control:focus {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--surface-border-focus);
+    box-shadow: 0 0 0 3px rgba(78, 205, 196, 0.2);
+    outline: none;
+}

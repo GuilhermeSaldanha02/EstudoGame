@@ -1,0 +1,43 @@
+/* Estilos para a página da comunidade */
+.post-card {
+    display: flex;
+    gap: 1rem;
+}
+
+.post-avatar img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid var(--surface-border-focus);
+}
+
+.post-content .post-author {
+    font-weight: 600;
+}
+
+.post-content .post-meta {
+    font-size: 0.9rem;
+    color: var(--text-color-muted);
+}
+
+.post-body {
+    margin-top: 1rem;
+}
+
+.post-actions {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--surface-border-color);
+    display: flex;
+    gap: 1.5rem;
+    color: var(--text-color-muted);
+}
+
+.post-actions .action-item {
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.post-actions .action-item:hover {
+    color: var(--text-color);
+}

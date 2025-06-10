@@ -1,0 +1,18 @@
+/* Estilos para a página de registro de estudos */
+.timer-container {
+    text-align: center;
+}
+
+.timer-display {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 6rem;
+    font-weight: 700;
+    margin: 2rem 0;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.timer-controls button {
+    font-size: 1.2rem;
+    padding: 0.75rem 2rem;
+    margin: 0 0.5rem;
+}

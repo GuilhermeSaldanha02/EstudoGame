@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EstudoGame - Login</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/login_cadastro.css" />
+  </head>
+  <body class="flex items-center justify-center min-h-screen p-4">
+    <!-- Floating Shapes Background -->
+    <div class="floating-shapes">
+      <div class="shape">
+        <i class="fas fa-gamepad text-6xl text-white"></i>
+      </div>
+      <div class="shape">
+        <i class="fas fa-trophy text-6xl text-yellow-300"></i>
+      </div>
+      <div class="shape">
+        <i class="fas fa-medal text-6xl text-orange-300"></i>
+      </div>
+    </div>
+
+    <div class="login-container rounded-3xl p-8 w-full max-w-md shadow-2xl">
+      <!-- Logo e Título -->
+      <div class="text-center mb-8">
+        <div class="mb-4">
+          <i class="fas fa-gamepad text-4xl text-yellow-300 game-icon"></i>
+          <i
+            class="fas fa-book-open text-4xl text-green-300 game-icon ml-2"
+          ></i>
+        </div>
+        <h1 class="text-3xl font-bold gradient-text mb-2">EstudoGame</h1>
+        <p class="text-white text-opacity-80">
+          Entre na sua conta e continue sua jornada
+        </p>
+      </div>
+
+      <!-- Formulário de Login -->
+      <form class="space-y-6">
+        <!-- Campo Email -->
+        <div>
+          <label for="email" class="block text-white text-sm font-medium mb-2">
+            <i class="fas fa-envelope mr-2"></i>Email
+          </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="input-field w-full px-4 py-3 rounded-xl text-white placeholder-white placeholder-opacity-60 focus:outline-none"
+            placeholder="seu@email.com"
+            required
+          />
+        </div>
+
+        <!-- Campo Senha -->
+        <div>
+          <label
+            for="password"
+            class="block text-white text-sm font-medium mb-2"
+          >
+            <i class="fas fa-lock mr-2"></i>Senha
+          </label>
+          <div class="relative">
+            <input
+              type="password"
+              id="password"
+              name="password"
+              class="input-field w-full px-4 py-3 rounded-xl text-white placeholder-white placeholder-opacity-60 focus:outline-none pr-12"
+              placeholder="••••••••"
+              required
+            />
+            <button
+              type="button"
+              class="absolute right-3 top-1/2 transform -translate-y-1/2 text-white text-opacity-60 hover:text-opacity-100"
+              onclick="togglePassword()"
+            >
+              <i class="fas fa-eye" id="toggleIcon"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Lembrar-me e Esqueci a senha -->
+        <div class="flex items-center justify-between">
+          <label class="flex items-center text-white text-sm">
+            <input type="checkbox" class="mr-2 rounded" />
+            Lembrar-me
+          </label>
+          <a
+            href="#"
+            class="text-yellow-300 text-sm hover:text-yellow-200 transition-colors"
+          >
+            Esqueci minha senha
+          </a>
+        </div>
+
+        <!-- Botão de Login -->
+        <button
+          type="submit"
+          class="btn-primary w-full py-3 rounded-xl text-white font-semibold text-lg shadow-lg"
+        >
+          <i class="fas fa-sign-in-alt mr-2"></i>Entrar
+        </button>
+      </form>
+
+      <!-- Divisor -->
+      <div class="flex items-center my-6">
+        <div class="flex-1 border-t border-white border-opacity-30"></div>
+        <span class="px-4 text-white text-opacity-60 text-sm">ou</span>
+        <div class="flex-1 border-t border-white border-opacity-30"></div>
+      </div>
+
+      <!-- Login Social -->
+      <div class="space-y-3">
+        <button
+          class="btn-social w-full py-3 rounded-xl text-white font-medium flex items-center justify-center"
+        >
+          <i class="fab fa-google mr-3 text-red-400"></i>
+          Continuar com Google
+        </button>
+        <button
+          class="btn-social w-full py-3 rounded-xl text-white font-medium flex items-center justify-center"
+        >
+          <i class="fab fa-facebook mr-3 text-blue-400"></i>
+          Continuar com Facebook
+        </button>
+      </div>
+
+      <!-- Link para Cadastro -->
+      <div class="text-center mt-8">
+        <p class="text-white text-opacity-80">
+          Não tem uma conta?
+          <a
+            href="cadastro.html"
+            class="text-yellow-300 hover:text-yellow-200 font-medium transition-colors"
+          >
+            Cadastre-se aqui
+          </a>
+        </p>
+      </div>
+
+      <!-- Estatísticas de Gamificação -->
+      <div class="mt-8 grid grid-cols-3 gap-4 text-center">
+        <div class="bg-white bg-opacity-10 rounded-lg p-3">
+          <i class="fas fa-users text-blue-300 text-xl mb-1"></i>
+          <div class="text-white text-xs">50K+ Usuários</div>
+        </div>
+        <div class="bg-white bg-opacity-10 rounded-lg p-3">
+          <i class="fas fa-trophy text-yellow-300 text-xl mb-1"></i>
+          <div class="text-white text-xs">1M+ Desafios</div>
+        </div>
+        <div class="bg-white bg-opacity-10 rounded-lg p-3">
+          <i class="fas fa-medal text-orange-300 text-xl mb-1"></i>
+          <div class="text-white text-xs">500K+ Aprovações</div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/js/login_cadastro.js.js"></script>
+  </body>
+</html>
