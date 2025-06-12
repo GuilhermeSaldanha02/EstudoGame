@@ -15,7 +15,6 @@
     <link rel="stylesheet" href="/css/login_cadastro.css" />
   </head>
   <body class="flex items-center justify-center min-h-screen p-4">
-    <!-- Floating Shapes Background -->
     <div class="floating-shapes">
       <div class="shape">
         <i class="fas fa-gamepad text-6xl text-white"></i>
@@ -29,7 +28,6 @@
     </div>
 
     <div class="login-container rounded-3xl p-8 w-full max-w-md shadow-2xl">
-      <!-- Logo e Título -->
       <div class="text-center mb-8">
         <div class="mb-4">
           <i class="fas fa-gamepad text-4xl text-yellow-300 game-icon"></i>
@@ -43,24 +41,21 @@
         </p>
       </div>
 
-      <!-- Formulário de Cadastro -->
       <form class="space-y-6">
-        <!-- Campo Nome Completo -->
         <div>
-          <label for="full_name" class="block text-white text-sm font-medium mb-2">
+          <label for="name" class="block text-white text-sm font-medium mb-2">
             <i class="fas fa-user mr-2"></i>Nome Completo
           </label>
           <input
             type="text"
-            id="full_name"
-            name="full_name"
+            id="name"
+            name="name"
             class="input-field w-full px-4 py-3 rounded-xl text-white placeholder-white placeholder-opacity-60 focus:outline-none"
             placeholder="Seu nome completo"
             required
           />
         </div>
 
-        <!-- Campo Email -->
         <div>
           <label for="email" class="block text-white text-sm font-medium mb-2">
             <i class="fas fa-envelope mr-2"></i>Email
@@ -75,7 +70,6 @@
           />
         </div>
 
-        <!-- Campo Senha -->
         <div>
           <label
             for="password"
@@ -95,17 +89,16 @@
             <button
               type="button"
               class="absolute right-3 top-1/2 transform -translate-y-1/2 text-white text-opacity-60 hover:text-opacity-100"
-              onclick="togglePassword()"
+              onclick="togglePasswordVisibility('password', 'toggleIcon')"
             >
               <i class="fas fa-eye" id="toggleIcon"></i>
             </button>
           </div>
         </div>
 
-        <!-- Campo Confirmar Senha -->
         <div>
           <label
-            for="confirm_password"
+            for="confirmPassword"
             class="block text-white text-sm font-medium mb-2"
           >
             <i class="fas fa-lock mr-2"></i>Confirmar Senha
@@ -113,8 +106,8 @@
           <div class="relative">
             <input
               type="password"
-              id="confirm_password"
-              name="confirm_password"
+              id="confirmPassword"
+              name="confirmPassword"
               class="input-field w-full px-4 py-3 rounded-xl text-white placeholder-white placeholder-opacity-60 focus:outline-none pr-12"
               placeholder="••••••••"
               required
@@ -122,14 +115,13 @@
             <button
               type="button"
               class="absolute right-3 top-1/2 transform -translate-y-1/2 text-white text-opacity-60 hover:text-opacity-100"
-              onclick="togglePassword()"
+              onclick="togglePasswordVisibility('confirmPassword', 'toggleIconConfirm')"
             >
-              <i class="fas fa-eye" id="toggleIcon"></i>
+              <i class="fas fa-eye" id="toggleIconConfirm"></i>
             </button>
           </div>
         </div>
 
-        <!-- Botão de Cadastro -->
         <button
           type="submit"
           class="btn-primary w-full py-3 rounded-xl text-white font-semibold text-lg shadow-lg"
@@ -138,7 +130,6 @@
         </button>
       </form>
 
-      <!-- Link para Login -->
       <div class="text-center mt-8">
         <p class="text-white text-opacity-80">
           Já tem uma conta?
@@ -152,8 +143,16 @@
       </div>
     </div>
 
-    <script src="/js/login_cadastro.js.js"></script>
+    <script src="../js/login_cadastro_new.js"></script>
+    
+    <script>
+      const apiClient = {
+        login: async () => {},
+        register: async () => {},
+        isAuthenticated: () => false,
+      };
+      const showError = (message) => console.error(message);
+      const showSuccess = (message) => console.log(message);
+    </script>
   </body>
 </html>
-
-
